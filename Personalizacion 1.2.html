@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalización de Sudaderas</title>
+    <style>
+        body {
+            background: -webkit-linear-gradient(to right, #cbcaa5, #334d50);
+            background: linear-gradient(to right, #cbcaa5, #334d50);
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        form {
+            background: -webkit-linear-gradient(to right, #cbcaa5, #334d50);
+            background: linear-gradient(to right, #cbcaa5, #334d50);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #f3727b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #d92027;
+        }
+    </style>
+</head>
+<body>
+    <h2>Personalización de Sudaderas</h2>
+    <p>Por favor, ingresa tus preferencias para personalizar tu sudadera:</p>
+    <form id="personalizacionForm" onsubmit="return validarFormulario()">
+        <label for="diseno">Diseño:</label>
+        <input type="text" id="diseno" name="diseno" required>
+        
+        <label for="color">Color:</label>
+        <input type="text" id="color" name="color" required>
+        
+        <label for="talla">Talla:</label>
+        <select id="talla" name="talla">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+        </select>
+        
+        <label for="material">Material:</label>
+        <select id="material" name="material">
+            <option value="Algodón">Algodón</option>
+            <option value="Poliéster">Poliéster</option>
+            <option value="Mezcla de algodón y poliéster">Mezcla de algodón y poliéster</option>
+        </select>
+        
+        <label for="estilo">Estilo:</label>
+        <input type="text" id="estilo" name="estilo">
+        
+        <label for="detalles">Detalles adicionales:</label>
+        <textarea id="detalles" name="detalles" rows="4"></textarea>
+        
+        <button type="submit">Enviar</button>
+    </form>
+     <a href="index.html" style="display: inline-block; background-color: #28a745; border: none; color: white; padding: 10px 20px; margin-top: 20px; text-decoration: none; cursor: pointer;">Regresar a página principal</a>
+
+    <script>
+        function validarFormulario() {
+            var diseno = document.getElementById("diseno").value;
+            var color = document.getElementById("color").value;
+
+            // Validación básica para diseño y color (puedes añadir más validaciones según tus necesidades)
+            if (diseno.trim() === "" || color.trim() === "") {
+                alert("Por favor, completa los campos de diseño y color.");
+                return false; // Detiene el envío del formulario si hay campos vacíos
+            }
+
+            return true; // Permite el envío del formulario si pasa todas las validaciones
+        }
+    </script>
+</body>
+</html>

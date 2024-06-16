@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Envío a Domicilio</title>
+    <style>
+        body {
+            background: -webkit-linear-gradient(to right, #cbcaa5, #334d50);
+            background: linear-gradient(to right, #cbcaa5, #334d50);
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Envío a Domicilio</h1>
+    <p>¡No hay problema! Por favor, ingresa tu información para el envío a domicilio:</p>
+    <form>
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" required>
+        <label for="codigo_postal">Código Postal:</label>
+        <input type="text" id="codigo_postal" name="codigo_postal" required>
+        <label for="numero">Número de Contacto:</label>
+        <input type="text" id="numero" name="numero" required>
+        <button type="submit">Enviar</button>
+    </form>
+    <a href="index.html" style="display: inline-block; background-color: #28a745; border: none; color: white; padding: 10px 20px; margin-top: 20px; text-decoration: none; cursor: pointer;">Regresar a página de Servicios</a>
+</body>
+</html>
